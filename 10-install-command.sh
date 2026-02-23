@@ -8,4 +8,12 @@ else
   echo "you run with root access"
 fi
 
-dnf install mysql -y
+dnf install mysqllfj -y
+
+if [ $? -eq 0 ]
+then 
+  echo "Installing MySQL is ... SUCCESS"
+else 
+  echo "Installing MySQL is ... FAILURE"
+  exit 1
+fi
