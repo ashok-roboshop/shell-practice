@@ -8,12 +8,13 @@ else
   echo "you run with root access"
 fi
 
+# validate function takes input as exit status, what command they tried to install
 VALIDATE(){
     if [ $1 -eq 0 ]
     then 
-    echo "Installing $2 is ... SUCCESS"
+    echo "Installing $1 is ... SUCCESS"
     else 
-    echo "Installing $2 is ... FAILURE"
+    echo "Installing $1 is ... FAILURE"
     exit 1
     fi
 }
